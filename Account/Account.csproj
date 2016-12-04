@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F0BB5441-AAE4-493F-B64E-BCA232044EC3}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{BABFDBE9-6A51-4388-A708-F9BBD4297086}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Bankomat</RootNamespace>
-    <AssemblyName>Bankomat</AssemblyName>
+    <RootNamespace>Account</RootNamespace>
+    <AssemblyName>Account</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,24 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ACCOUNT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Account\Account.csproj">
-      <Project>{babfdbe9-6a51-4388-a708-f9bbd4297086}</Project>
-      <Name>Account</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Bank\Bank.csproj">
       <Project>{c9939512-d417-4c00-aff7-4d334ed90a4c}</Project>
       <Name>Bank</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Client\Client.csproj">
-      <Project>{E477ED68-521A-48A4-B533-9A6A2F090722}</Project>
-      <Name>Client</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
